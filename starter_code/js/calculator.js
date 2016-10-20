@@ -28,7 +28,7 @@ $(document).ready(function()
 
 	function isOneOperandOperator(n) 
 	{
-  		return n == "SQRT" || n == "log";
+  		return n == "SQRT" || n == "log" || n == "FACT";
 	}
 
 	function isTwoOperandOperator(n) 
@@ -76,6 +76,11 @@ $(document).ready(function()
 					answer = square_root(first_operand);
 					$('#question').prepend("sqrt(");
 					$('#question').append(")");
+				}
+				else if (operator == "FACT"){
+				
+					answer = factorial(first_operand);
+					$('#question').append("!");
 				}
 
 				else if (operator == "log")
